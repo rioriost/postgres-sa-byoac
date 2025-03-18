@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Install API Dependencies",
+            "type": "shell",
+            "command": "${config:python.pythonPath} -m pip install -r ${workspaceFolder}/src/api/requirements.txt",
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "install",
+            "options": {
+                "cwd": "${workspaceFolder}/src/userportal"
+            }
+        }
+    ]
+}
