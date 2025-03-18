@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Portal Debugger",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "preLaunchTask": "npm: install",
+            "cwd": "${workspaceFolder}/src/userportal"
+        },
+        {
+            "name": "API Debugger (Windows)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/api/app/main.py",
+            "args": [
+                "run",
+                "uvicorn",
+                "main:app",
+                "--reload"
+            ],
+            "jinja": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src/api"
+            },
+            "python": "${workspaceFolder}/src/api/.venv/Scripts/python.exe",
+        },
+        {
+            "name": "API Debugger (macOS)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/api/app/main.py",
+            "args": [
+                "run",
+                "uvicorn",
+                "main:app",
+                "--reload"
+            ],
+            "jinja": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src/api"
+            },
+            "python": "${workspaceFolder}/src/api/.venv/bin/python",
+        },
+        {
+            "name": "Graph Loader",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/api/app/graph_loader.py",
+            "args": [],
+            "jinja": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src/api"
+            },
+            "python": "${workspaceFolder}/src/api/.venv/Scripts/python.exe",
+            "justMyCode": false
+        }
+    ]
+}
