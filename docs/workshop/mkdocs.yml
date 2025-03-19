@@ -18,14 +18,14 @@
 
 # Project information .........................................
 site_name: "Build your own advanced AI Copilot with PostgreSQL: Workshop Guide"
-site_url: https://aka.ms/pg-byoac-docs
+site_url: https://azure-samples.github.io/postgres-sa-byoac/
 site_author: jjfrost
 site_description: >-
   Build custom AI-powered solutions on top of Azure Database for PostgreSQL.
 
 # Repository ..................................................
-repo_name: azure-samples/postgres-build-your-own-advanced-ai-copilot
-repo_url: https://aka.ms/pg-byoac-repo
+repo_name: azure-samples/postgres-sa-byoac
+repo_url: https://github.com/azure-samples/postgres-sa-byoac
 
 # Copyright ...................................................
 copyright: >
