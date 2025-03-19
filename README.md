@@ -1,7 +1,29 @@
-# PostgreSQL Solution Accelerator: Build your own AI Copilot / FSI Scenario
+# PostgreSQL Solution Accelerator: Build your own advanced AI Copilot with Postgres
 
-In the financial services industry (FSI), validating financial documents, like contracts, statements of work (SOWs), and invoices poses distinct challenges. This is particularly true when it comes to ensuring that invoices align with SOWs, especially for milestone-based payments and other specific deliverables. Traditionally, this validation process is manual, requiring meticulous comparison and cross-checking, often leading to delays, errors, and elevated operational costs. This accelerator explores a high-level architectural solution utilizing Microsoft Azure's comprehensive suite of AI services to automate and streamline this process, resulting in faster, more accurate, and cost-effective invoice validation.
+This solution accelerator is designed as an end-to-end example of an AI-enabled application built on Azure Postgres. It demonstrates the implementation of generative AI capabilities to enhance an existing application with AI-driven data validation, vector search, DiskANN, semantic re-ranking, LangChain agent/tools framework, and GraphRAG on Azure Database for PostgreSQL, and illustrates how they can be combined to deliver high quality responses to financial questions via an intelligent copilot. The app uses a small sample dataset made up of statements of work (SOWs) and invoices.
 
-The documentation for completing the workshop can be found here:
+> The full documentation for deploying and completing the workshop can be found here:
+> <http://aka.ms/pg-byoac-docs/>
 
-<http://aka.ms/pg-byoac-repo/>
+# Solution Accelerator Architecture:
+
+![High-level architecture diagram for the solution](docs/workshop/docs/img/solution-architecture-diagram.png)
+
+# Key Highlights
+
+1. **LangChain Agent and Tool Framework:** Demonstrates how to build powerful LangChain-based Agents that interact with PostgreSQL and vector stores using Tools and Chains—bridging LLMs with data and application logic.
+2. **Vector Search with RAG Pattern Built into PostgreSQL:** The solution enables in-database Retrieval-Augmented Generation (RAG) using the `pgvector` extension for efficient vector search, making PostgreSQL a powerful foundation for intelligent applications that combine structured data with generative AI.
+3. **Semantic Re-ranking with Cross Encoder Models:** Enhances relevance ranking through semantic re-ranking, using configurable Cross Encoder models. The accelerator supports two options:
+    - `cross-encoder/ms-marco-MiniLM-L-6-v2 (lightweight and fast)`
+    - `bge-reranker-v2-m3 (higher accuracy, heavier model)`
+4. **GraphRAG with Apache AGE for Knowledge-Rich Context:** Extends RAG with GraphRAG, integrating `Apache AGE` (A Graph Extension for PostgreSQL) to enrich retrieval and grounding via knowledge graphs—ideal for complex relationships and semantic context.
+5. **High-Performance DiskANN Index Integration:** Supports `DiskANN` (Disk-Accelerated Approximate Nearest Neighbor), offering scalable and fast vector similarity search, optimized for large datasets and low-latency retrieval directly within PostgreSQL.
+6. **Azure AI Extension for PostgreSQL:** Leverages the Azure AI Extension, enabling direct embedding generation and model inference from Azure OpenAI or custom endpoints, eliminating the need for external model integration pipelines.
+7. **Azure Storage Extension for Document-Linked Workflows:** Uses the Azure Storage Extension for PostgreSQL to access and retrieve unstructured content such as .csv and documents from Blob Storage directly inside PostgreSQL workflows.
+8. **Document Intelligence Integration:** Integrates Azure Document Intelligence (formerly Form Recognizer) to extract structured content from documents—powering advanced data ingestion and enrichment scenarios for AI pipelines.
+9. **Hands-On Learning Through Guided Labs:** The solution includes a comprehensive step-by-step hands-on guide with real-world examples—making it ideal for practitioners to learn by doing and gain practical experience with AI-native PostgreSQL patterns.
+
+
+
+
+

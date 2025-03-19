@@ -2,7 +2,8 @@
 .DS_Store
 .venv
 docs/workshop/site
-scripts/aml/model_asset/model
+scripts/aml/model_asset/model-mini
+scripts/aml/model_asset/model-bge
 src/*/dist
 node_modules
 src/api/run-local.sh
