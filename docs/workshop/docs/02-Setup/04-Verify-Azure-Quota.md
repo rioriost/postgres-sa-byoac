@@ -10,8 +10,8 @@ This solution contains an Azure Developer CLI `azd-template` that provisions the
 
 This solution accelerator contains a section dedicated to setting up and using a Semantic Ranking model directly from your PostgreSQL database. The deployment of this component of the architecture requires sufficient CPU quota (4 or 16 cores) in Azure Machine Learning to accommodate your choice of either of the following models:
 
-- [Hugging Face miniLM re-ranker model deployment](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2). Smaller model, high accuracy, requiring 4 cores.
-- [Hugging Face BGE re-ranker model deployment](https://huggingface.co/BAAI/bge-reranker-v2-m3). Larger model, highest accuracy, requiring 16 cores.
+- [Hugging Face miniLM re-ranker model deployment](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2). Smaller model, high accuracy, requiring 4 CPU cores.
+- [Hugging Face BGE re-ranker model deployment](https://huggingface.co/BAAI/bge-reranker-v2-m3). Larger model, highest accuracy, requiring 16 CPU cores.
 
 In this task, you must verify you have available quota for the target virtual machine (VM) instance type (`STANDARD_D4AS_V4` or `STANDARD_D16AS_V4`), and if not, request additional quota.
 
