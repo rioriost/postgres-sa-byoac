@@ -1,8 +1,8 @@
-# 2.5 プロビジョニングとデプロイ {/*examples*/}
+# 2.5 プロビジョニングとデプロイ
 
 このラボを完了するには、有効な Azure サブスクリプション、GitHub アカウント、および関連する Azure OpenAI モデルへのアクセスが必要です。詳細が必要な場合は、[前提条件](./00-Prerequisites.md)セクションを確認してください。
 
-## Docker Desktop を起動する {/*examples*/}
+## Docker Desktop を起動する
 
 Docker Desktop は、_Woodgrove Bank Portal and API_ アプリケーションを実行するためのコンテナを作成およびデプロイするために使用されます。`azd up` を使用してデプロイメントプロセスを開始する前に、実行している必要があります。
 
@@ -10,13 +10,13 @@ Docker Desktop は、_Woodgrove Bank Portal and API_ アプリケーションを
 
 2. システムトレイまたはメニューバーに Docker アイコンが表示されていることを確認して、実行中であることを確認します。
 
-## Azure に認証する {/*examples*/}
+## Azure に認証する
 
 `azd up` コマンドを実行する前に、VS Code 環境を Azure に認証する必要があります。
 
 1. Azure リソースを作成するには、VS Code から認証されている必要があります。VS Code で新しい統合ターミナルを開き、次の手順を完了します。
 
-### プロビジョニング後のタスクのために `az` で認証する {/*examples*/}
+### プロビジョニング後のタスクのために `az` で認証する
 
 1. 以下のコマンドを使用して Azure CLI `az` にログインします。
 
@@ -28,7 +28,7 @@ Docker Desktop は、_Woodgrove Bank Portal and API_ アプリケーションを
 
     !!! info "複数の Azure サブスクリプションを持っている場合は、`az account set -s <subscription-id>` を実行して使用する正しいサブスクリプションを指定する必要があるかもしれません。"
 
-### リソースのプロビジョニングと管理のために `azd` で認証する {/*examples*/}
+### リソースのプロビジョニングと管理のために `azd` で認証する
 
 1. Azure Developer CLI にログインします。これはインストールごとに一度だけ必要です。
 
@@ -36,7 +36,7 @@ Docker Desktop は、_Woodgrove Bank Portal and API_ アプリケーションを
     azd auth login
     ```
 
-## Azure リソースのプロビジョニングとアプリのデプロイ (UI と API) {/*examples*/}
+## Azure リソースのプロビジョニングとアプリのデプロイ (UI と API)
 
 これで、Azure リソースをプロビジョニングし、Woodgrove Bank ソリューションをデプロイする準備が整いました。
 

@@ -17,7 +17,7 @@ Python の仮想環境は、クリーンで整理された開発スペースを�
 
     ```bash title=""
     cd src/api
-    python -m venv .venv 
+    python -m venv .venv
     ```
 
     上記のコマンドは、`api` フォルダーの下に `.venv` フォルダーを作成し、このラボ全体で使用できる `api` プロジェクト専用の Python 環境を提供します。
@@ -73,9 +73,9 @@ Python の仮想環境は、クリーンで整理された開発スペースを�
         App Configurationリソースのエンドポイントを取得するには:
 
         1. [Azureポータル](https://portal.azure.com/)でApp Configurationリソースに移動します。
-        
+
         2. リソースナビゲーションメニューの**Settings**の下にある**Access settings**を選択します。
-        
+
         3. **Endpoint**の値をコピーして、`.env`ファイルに貼り付けます。
 
 
@@ -83,7 +83,7 @@ Python の仮想環境は、クリーンで整理された開発スペースを�
 
 5. `.env` ファイルを保存します。
 
-## pgAdmin からデータベースに接続する {/*examples*/}
+## pgAdmin からデータベースに接続する
 
 pgAdmin を使用して、データベース内のさまざまな機能を構成し、それらの機能をテストするためのクエリを実行します。`azd up` デプロイメント スクリプトは、Microsoft Entra ID ユーザーをデータベースの所有者として追加したため、Entra ID で認証します。pgAdmin を使用して Azure Database for PostgreSQL - Flexible Server に接続するには、以下の手順に従ってください。
 

@@ -11,8 +11,8 @@ sow_invoice_generator
 │   ├── generate_invoices.py    # Script to generate invoices for each milestone
 │   └── config
 │       ├── sow_inv.config      # Configuration file with project details
-│       └── bad_inv.config  # Configuration file for generating bad invoices  
-│       └── bad_sow.config  # Configuration file for generating bad SOWs 
+│       └── bad_inv.config  # Configuration file for generating bad invoices
+│       └── bad_sow.config  # Configuration file for generating bad SOWs
 ├── requirements.txt            # List of dependencies for the project
 └── README.md                   # Documentation for the project
 ```
@@ -51,7 +51,7 @@ python src/generate_sow.py
 SOWで定義された各マイルストーンのインボイスを生成するには、（`/data/data_generator` ディレクトリ内で）以下を実行します：
 
 ```bash
-python src/generate_invoices.py "Contoso Ltd." 
+python src/generate_invoices.py "Contoso Ltd."
 ```
 
 これにより、そのベンダーのSOWで指定されたマイルストーンと成果物にリンクされた個別のPDFインボイスが作成されます。
@@ -84,7 +84,7 @@ python src/generate_invoices.py
 1. Fabrikam Inc.
 1. The Phone Company
 
-## 不良SOWの生成 {/*examples*/}
+## 不良SOWの生成
 
 bad_sow.config構成ファイルを使用して`Fabrikam Inc`ベンダーの不良SOWを生成するには、（`/data/data_generator`ディレクトリ内で）次を実行します：
 
@@ -92,7 +92,7 @@ bad_sow.config構成ファイルを使用して`Fabrikam Inc`ベンダーの不�
 python src/generate_sow.py "Fabrikam Inc" bad_sow.config
 ```
 
-## 不良請求書の生成 {/*examples*/}
+## 不良請求書の生成
 
 bad_inv.config構成ファイルを使用して`Fabrikam Inc`ベンダーの不良請求書を生成するには、（`/data/data_generator`ディレクトリ内で）次を実行します：
 
@@ -100,12 +100,12 @@ bad_inv.config構成ファイルを使用して`Fabrikam Inc`ベンダーの不�
 python src/generate_invoices.py "Fabrikam Inc" bad_inv.config
 ```
 
-## 出力 {/*examples*/}
+## 出力
 
 生成されたSOWと請求書は
 
 ```plaintext
-../data/sample_docs 
+../data/sample_docs
 ```
 
 ディレクトリに保存されます。任意のPDFビューアで開くことができます。

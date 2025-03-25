@@ -32,5 +32,3 @@
     サンプルデータセットを参照するAI検証ロジックを確認し、修正します。
     5. **ストレージと権限**：
     AI処理およびデータベースサービスがデータを読み取り処理するための正しいアクセス（データ共同作成者）権限を持っていることを確認します。
-
-It seems like you haven't pasted any content. Please provide the Markdown content you would like translated, and I'll assist you with the translation.

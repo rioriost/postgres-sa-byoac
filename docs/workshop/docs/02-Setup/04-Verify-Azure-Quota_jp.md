@@ -57,7 +57,7 @@
 
 11. リクエストが拒否された場合、リクエストを発行する権限がない場合、または追加のクォータをリクエストしないことを選択した場合は、`azd up` コマンドを実行する際に `deployAMLModel` フラグを `none` に設定することで、**Semantic Ranking** モデルのデプロイを除外するオプションがあります。
 
-## Azure リソースプロバイダーの確認 {/*examples*/}
+## Azure リソースプロバイダーの確認
 
 ソリューションアクセラレータが Azure Machine Learning リソースを正常にデプロイするためには、いくつかの Azure リソースプロバイダーを Azure サブスクリプションに登録する必要があります。
 
@@ -81,12 +81,12 @@
     コンソール出力は次のようになります：
 
     ```text
-    Namespace                          RegistrationState    
-    ---------------------------------  -------------------  
-    Microsoft.MachineLearningServices  NotRegistered        
-    Microsoft.Cdn                      Registered           
-    Microsoft.PolicyInsights           NotRegistered        
-    Microsoft.ApiManagement            NotRegistered        
+    Namespace                          RegistrationState
+    ---------------------------------  -------------------
+    Microsoft.MachineLearningServices  NotRegistered
+    Microsoft.Cdn                      Registered
+    Microsoft.PolicyInsights           NotRegistered
+    Microsoft.ApiManagement            NotRegistered
     ```
 
     コンソール出力にはリソースプロバイダーと**RegistrationState**が表示されます。**RegistrationState**が**Registered**と表示されている場合、そのリソースプロバイダーは Azure サブスクリプションに登録されています。

@@ -31,5 +31,3 @@ Microsoft Azure リソースは、あなたの Azure サブスクリプション
 !!! warning "上記のコストはあくまで推定です。"
 
     ここで提供されているコストは、提供された構成を使用してソリューションアクセラレータを実行することに基づく推定値であり、ソリューションアクセラレータを実行する際のコストに関する一般的なガイダンスを提供することを目的としています。デプロイメントオプション、リージョンの選択、データサイズによって、個々のコストは異なります。
-
-It seems like your message was empty. Please paste the Markdown content you want translated, and I'll assist you with the translation.
