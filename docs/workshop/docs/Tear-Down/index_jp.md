@@ -11,7 +11,7 @@
 
 ## フィードバックを提供する
 
-このラボを他の人にとってより良くするためのフィードバックがありますか？[問題を開く](http://aka.ms/pg-byoac-repo/)してお知らせください。
+このラボを他の人にとってより良くするためのフィードバックがありますか？[問題をオープン](http://aka.ms/pg-byoac-repo/)してお知らせください。
 
 ## クリーンアップ
 
@@ -34,5 +34,3 @@
 ## GitHubに変更を永続化する
 
 ファイルに加えた変更を保存したい場合は、VS Codeのソースコントロールツールを使用して、GitHubリポジトリのフォークに変更をコミットしてプッシュしてください。
-
-It seems like your message is empty. Please paste the Markdown content you want translated, and I'll assist you with the translation.
