@@ -41,22 +41,23 @@
         リソースグループの作成に加えて、`azd up`コマンドは以下の表に示すように、複数のリソースをそのリソースグループにデプロイしました。
 
 ```markdown
-| リソースタイプ | 名前 |
-| :-- | :-- |
-| コンテナレジストリ | `cr<unique_string>` |
-| Log Analytics ワークスペース | `log-<unique_string>` |
-| Key Vault | `kv-<unique_string>` |
-| ドキュメントインテリジェンス | `di-<unique_string>` |
-| 言語 | `lang-<unique_string>` |
-| Application Insights | `appi-<unique_string>` |
-| コンテナアプリ環境 | `cae-<unique_string>` |
-| ストレージアカウント | `st<unique_string>` |
-| Azure Database for PostgreSQL - フレキシブルサーバー | `psql-data<unique_string>` |
-| Azure OpenAI | `openai-<unique_string>` |
-| 機械学習ワークスペース | `mlw-<unique_string>` |
-| 機械学習エンドポイント | `mle-<unique_string>` |
-| コンテナアプリ | `ca-api-<unique_string>` |
-| コンテナアプリ | `ca-portal-<unique_string>` |
+| Name                        | Type                             |
+| --------------------------- | -------------------------------- |
+| `appcs-<unique_string>`     | Application Configuration        |
+| `appi-<unique_string>`      | Application Insights             |
+| `ca-api-<unique_string>`    | Container App                    |
+| `ca-portal-<unique_string>` | Container App                    |
+| `cae-<unique_string>`       | Container Apps Environment       |
+| `cr<unique_string>`         | Container registry               |
+| `di-<unique_string>`        | Document Intelligence            |
+| `kv-<unique_string>`        | Key Vault                        |
+| `lang-<unique_string>`      | Language                         |
+| `log-<unique_string>`       | Log Analytics workspace          |
+| `mle-<unique_string>`       | Machine learning online endpoint |
+| `mlw-<unique_string>`       | Azure Machine Learning workspace |
+| `openai-<unique_string>`    | Azure OpenAI                     |
+| `psql-data<unique_string>`  | Azure Database for PostgreSQL flexible server |
+| `st<unique_string>`         | Storage Account                  |
 
 上記のリソース名にある `<unique_string>` トークンは、リソースの命名時に Bicep スクリプトによって生成されるユニークな文字列を表しています。これにより、リソースがユニークに命名され、リソース命名の衝突を避けることができます。
 
@@ -73,8 +74,6 @@
 ### Woodgrove API が実行されていることを確認する
 
 1. Azure リソースグループに開かれたブラウザウィンドウで、名前が **ca-api** で始まる **コンテナアプリ** リソースを選択します。
-```
-
 
     ![リソースグループ内のリソースのスクリーンショット。ca-api コンテナーアプリリソースが強調表示されています。](../img/azure-portal-rg-ca-api.png)
 
@@ -135,7 +134,6 @@ Azure AI Foundry ポータルを使用して、`gpt-4o` および `text-embeddin
 3. プロンプトが表示されたら、Machine Learning Studio にサインインします。
 
 4. Machine Learning Studio で、左側のリソースメニューの **アセット** の下にある **エンドポイント** を選択し、次にあなたのエンドポイント（`bge-v2-m3-reranker model` または `msmarco-minilm-deployment-6 model`）を選択します。
-
 
     ![Azure Machine Learning Studioのエンドポイントページのスクリーンショット。エンドポイントメニュー項目とリランカーモデルエンドポイントが強調表示されています。](../img/aml-studio-endpoints.png)
 

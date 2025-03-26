@@ -26,15 +26,15 @@ Python の仮想環境は、クリーンで整理された開発スペースを�
 
     !!! note "OS とシェルに応じて適切なコマンドを選択してください。"
 
-        | プラットフォーム | シェル | 仮想環境をアクティブにするコマンド |
-        | -------- | ----- | --------------------------------------- |
-        | POSIX | bash/zsh | `source .venv/bin/activate` |
-        | | fish | `source .venv/bin/activate.fish` |
-        | | csh/tcsh | `source .venv/bin/activate.csh` |
-        | | pwsh | `.venv/bin/Activate.ps1` |
-        | Windows | cmd.exe | `.venv\Scripts\activate.bat` |
-        | | PowerShell | `.venv\Scripts\Activate.ps1` |
-        | macOS | bash/zsh | `source .venv/bin/activate` |
+        | プラットフォーム |   シェル    | 仮想環境をアクティブにするコマンド     |
+        | ------------- | ---------- | -------------------------------- |
+        | POSIX         | bash/zsh   | `source .venv/bin/activate`      |
+        |               | fish       | `source .venv/bin/activate.fish` |
+        |               | csh/tcsh   | `source .venv/bin/activate.csh`  |
+        |               | pwsh       | `.venv/bin/Activate.ps1`         |
+        | Windows       | cmd.exe    | `.venv\Scripts\activate.bat`     |
+        |               | PowerShell | `.venv\Scripts\Activate.ps1`     |
+        | macOS         | bash/zsh   | `source .venv/bin/activate`      |
 
 4. ターミナルプロンプトでコマンドを実行して、仮想環境をアクティブにします。
 
@@ -126,8 +126,7 @@ pgAdmin を使用して、データベース内のさまざまな機能を構成
        2. 統合ターミナルのプロンプトで、次のコマンドを実行してアクセストークンを生成し、出力します：
 
            ```bash
-           $token = az account get-access-token --resource-type oss-rdbms --output json | ConvertFrom-Json
-           $token.accessToken
+           az account get-access-token --resource https://ossrdbms-aad.database.windows.net --query accessToken --output tsv
            ```
 
        3. 出力された値をコピーします。
