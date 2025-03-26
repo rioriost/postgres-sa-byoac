@@ -12,22 +12,22 @@
     - Edge、Chrome、またはSafariの最新バージョンをインストールすることをお勧めします。
 2. **GitHubアカウント。**
     - サンプルリポジトリのコピー（フォークと呼ばれる）を作成するために必要です。
-    - 便利さのために、個人用（企業用ではなく）のGitHubアカウントを使用することをお勧めします。
+    - 個人用（企業用ではなく）のGitHubアカウントを使用する方が便利なので、お勧めです。
     - GitHubアカウントをお持ちでない場合は、[無料でサインアップ](https://github.com/signup)してください。（数分で完了します。）
 3. **Azureサブスクリプション。**
     - AIプロジェクトのためのAzureインフラストラクチャをプロビジョニングするために必要です。
     - Azureアカウントをお持ちでない場合は、[無料でサインアップ](https://aka.ms/free)してください。（数分で完了します。）
 4. **十分なAzure MLオンラインエンドポイントCPUクォータ**
     - ソリューションアクセラレーターの**セマンティックリランカー**要素を実行するために、2つの選択肢があります。
-        - 標準DASv4で4 vCPUを持つ小型で高品質なモデルを実行できます。
-        - または、標準DASv4で16 vCPUを持つ、より大きく、さらに正確なモデルを実行することもできます。
+        - Standard DASv4 with 4 vCPUs 上で、小型で高品質なモデルを実行できます。
+        - または、Standard DASv4 with 16 vCPUs 上で、より大きく、さらに正確なモデルを実行することもできます。
         - したがって、選択するモデルに応じて、サブスクリプションで4または16コアが利用可能であることを確認する必要があります。サブスクリプションでこれを確認するための詳細な手順はセットアップセクションに提供されています。
 5. **ワークショップリソースに適したAzureリージョン**
     - ワークショップを成功裏に完了し、必要なAzureリソースをデプロイするためには、それらのリソースをサポートするリージョンを選択する必要があります。
     - Azureリージョンを選択する前に：
       - Azure OpenAIの[gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint)および[text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint)モデルの地域可用性ガイダンスを確認してください。
         - **Azure OpenAIの`gpt-4o`および`text-embedding-ada-002`モデルをサポートするリージョン**を選択してください。
-        - 両方の`gpt-4o`および`text-embedding-ada-002`モデルに対して、**少なくとも10K TPMの`Standard`容量がリージョンで利用可能であること**を確認してください。[これらの指示](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota)に従って、利用可能なクォータを確認してください。
+        - 両方の`gpt-4o`および`text-embedding-ada-002`モデルに対して、**少なくとも10K TPMの`Standard`キャパシティがリージョンで利用可能であること**を確認してください。[これらの指示](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota)に従って、利用可能なクォータを確認してください。
 
 Azure OpenAIモデルの両方をサポートし、両モデルに対して少なくとも10K TPMの`Standard`キャパシティを持つリージョンを選択する必要があります。
 
@@ -58,7 +58,7 @@ Azure OpenAIモデルの両方をサポートし、両モデルに対して少�
     - 必要に応じて、VS Codeターミナルで`bash`を使用してプロビジョニング後のスクリプトを実行します。
     - セットアップ中にAzure CLIおよびAzure Developer CLIコマンドを実行するためにも使用します。
 3. **PythonおよびJavaScript UIフレームワークに精通していること**
-    - スターターソリューションに変更を加えるために、REACT JavaScriptおよびPythonコードを修正します。
+    - スターターソリューションに変更を加えるために、React JavaScriptおよびPythonコードを修正します。
     - 一部のステップでは、コマンドラインやVS CodeからPythonコードを作成して実行します。
     - 一部のステップでは、Pythonカーネルを選択して既存のスクリプトを実行します。
 
