@@ -10,6 +10,25 @@ Docker Desktop is used to create and deploy the containers used for runnig the _
 
 2. Look for the Docker icon in your system tray or menu bar to confirm it is running.
 
+## Build and Open Dev Container (Only if you chosen the Dev Container Setup Option Previously)
+
+In this step you will open and build your dev container in VS Code.  After you complete this, you can complete the remaining steps in this page by running all commands inside
+your dev container command line not your local operating system command line.
+
+1. Open VS Code
+2. Open Folder of your locally cloned repo
+3. Press `Ctrl+Shift+P` to open the command palette
+4. Type: `Dev Container` and choose "Rebuild and Reopen in Container"
+
+!!! info "Dev Container Build Process"
+
+    This will kick off a docker build process where you dev container will be built by docker desktop.  Let this process run, it may take a few minutes the first time.
+    You will see VS Code flash and load into a new project environment.  Once the process completes, you can open a new terminal in VS Code.  You will notice the shell will
+    look a little different as now you are in an Ubuntu Linux Container.
+
+    From here on out in the documentation, run your commands in the dev container shell.  Except for tools like pgAdmin, you will
+    still run these in your main operating system not the dev container.
+
 ## Authenticate With Azure
 
 Before running the `azd up` command, you must authenticate your VS Code environment to Azure.
