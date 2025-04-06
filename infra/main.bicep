@@ -27,6 +27,13 @@ param postgresqlDatabaseName string = 'contracts'
 ])
 param deployAMLModel string
 
+@description('Version of the OpenAI model to deploy')
+@allowed([
+  '2024-05-13'
+  '2024-11-20'
+])
+param openAiModelVersion string
+
 @description('Determines whether to deploy the OpenAI models')
 param deployOpenAIModels bool = true // default to true
 
@@ -265,7 +272,7 @@ module openAi './shared/openai.bicep' = if (deployOpenAi) {
         }
         model: {
           name: 'gpt-4o'
-          version: '2024-05-13'
+          version: openAiModelVersion
         }
       }
       {

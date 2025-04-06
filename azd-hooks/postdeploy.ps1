@@ -14,9 +14,8 @@ az account set --subscription "${env:AZURE_SUBSCRIPTION_ID}"
 # ##############################################################################
 # Install Required Azure CLI Extensions
 # ##############################################################################
-# 4/5/2025 - 2 lines below no longer needed and causes errors on some users dev environments during setup
-# az config set extension.use_dynamic_install=yes_without_prompt
-# az extension add -y -n "rdbms-connect"
+az config set extension.use_dynamic_install=yes_without_prompt
+az extension add -y -n "rdbms-connect"
 
 # ##############################################################################
 # Get the current user's name and access token to connect to the PostgreSQL Server
