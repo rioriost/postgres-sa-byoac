@@ -1,0 +1,26 @@
+{
+    "name": "Build your own advanced AI Copilot with Postgres Dev Container",
+    "build":
+    {
+        "dockerfile": "Dockerfile"
+    },
+    "settings":
+    {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "features":
+    {
+        "ghcr.io/devcontainers/features/docker-in-docker:2":
+        {
+            "version": "latest",
+            "moby": true
+        }
+    },
+    "extensions":
+    [
+        "ms-python.python",
+        "ms-azuretools.vscode-azurecli"
+    ],
+    "postCreateCommand": "pwsh -Command ./.devcontainer/post-create-setup.ps1",    
+    "remoteUser": "vscode"
+}
