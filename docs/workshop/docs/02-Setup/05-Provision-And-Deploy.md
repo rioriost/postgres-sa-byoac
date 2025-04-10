@@ -76,7 +76,10 @@ You are now ready to provision your Azure resources and deploy the Woodgrove Ban
             - `mini` to deploy the "MiniLM-L6-v2" Cross Encoder model (smaller, fastest, high accuracy, deploys a 4 vCPU Azure ML host)
             - `bge` to deploy the "BGE-Reranker-v2-M3" Cross Encoder  model (larger, fast, highest accuracy, deploys a 16 vCPU Azure ML host)
             - `none` to not deploy any Cross Encoder and skip the Semantic Re-ranker feature.
-        - If you select `False`, you will need to skip the optional **Semantic Ranker** section of this accelerator.
+        - **Enter a value for the `openAiModelVersion`**: Select one of the following values using the up and down arrow keys:
+            - `2024-05-13` this deploys this version of OpenAI gpt-4o.  This version works in most Azure regions.
+            - `2024-11-20` this deploys this version of OpenAI gpt-4o.  This version works in some Azure regions where 2024-05-13 does not, for example, Japan East. For the most
+            up to date information on what versions are supported in what regions, see the [Standard models by endpoint page](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint).        
         - **Enter a value for the `resourceGroupName`**: Enter `rg-postgresql-accelerator`, or a similar name.
 
 2. Wait for the process to complete. Depending on the option you selected for the `deployAMLModel` setting, the deployment will take different amounts of time:
