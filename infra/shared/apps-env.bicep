@@ -3,7 +3,6 @@ param location string = resourceGroup().location
 param tags object = {}
 
 param logAnalyticsWorkspaceName string
-param applicationInsightsName string = ''
 
 resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2024-03-01' = {
   name: name
@@ -17,16 +16,11 @@ resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2024-03-01'
         sharedKey: logAnalyticsWorkspace.listKeys().primarySharedKey
       }
     }
-    daprAIConnectionString: applicationInsights.properties.ConnectionString
   }
 }
 
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2022-10-01' existing = {
   name: logAnalyticsWorkspaceName
-}
-
-resource applicationInsights 'Microsoft.Insights/components@2020-02-02' existing = {
-  name: applicationInsightsName
 }
 
 output name string = containerAppsEnvironment.name

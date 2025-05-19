@@ -32,4 +32,5 @@ resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
 output applicationInsightsName string = applicationInsights.name
 output logAnalyticsWorkspaceId string = logAnalytics.id
 output logAnalyticsWorkspaceName string = logAnalytics.name
-output appInsightsConnectionString string = applicationInsights.properties.ConnectionString
+// output appInsightsConnectionString string = applicationInsights.properties.ConnectionString
+// The Application Insights connection string is not available at deployment time. Retrieve it post-deployment if needed.

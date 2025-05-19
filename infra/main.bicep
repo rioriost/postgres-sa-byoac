@@ -64,7 +64,7 @@ var deployOpenAi = empty(existingOpenAiInstance.name)
 // }
 
 // Tags that should be applied to all resources.
-// 
+//
 // Note that 'azd-service-name' tags should be applied separately to service host resources.
 // Example usage:
 //   tags: union(tags, { 'azd-service-name': <service name in azure.yaml> })
@@ -128,11 +128,6 @@ module monitoring './shared/monitoring.bicep' = {
   scope: rg
 }
 
-resource appInsights 'Microsoft.Insights/components@2022-05-01' existing = {
-  name: monitoring.outputs.applicationInsightsName
-  scope: rg
-}
-
 module registry './shared/registry.bicep' = {
   name: 'registry'
   params: {
@@ -149,7 +144,6 @@ module appsEnv './shared/apps-env.bicep' = {
     name: '${abbrs.appManagedEnvironments}${resourceToken}'
     location: location
     tags: tags //union(tags, { 'azd-service-name': 'web' })
-    applicationInsightsName: monitoring.outputs.applicationInsightsName
     logAnalyticsWorkspaceName: monitoring.outputs.logAnalyticsWorkspaceName
   }
   scope: rg
@@ -172,10 +166,6 @@ module userPortalApp './app/UserPortal.bicep' = {
       {
         name: 'SERVICE_API_ENDPOINT_URL'
         value: apiApp.outputs.uri
-      }
-      {
-        name: 'ApplicationInsights__ConnectionString'
-        value: monitoring.outputs.appInsightsConnectionString
       }
     ]
     secretSettings: []
@@ -203,7 +193,7 @@ module apiApp './app/API.bicep' = {
     envSettings: [
       {
         name: 'ApplicationInsights__ConnectionString'
-        value: monitoring.outputs.appInsightsConnectionString
+        value: '' // Connection string must be set post-deployment
       }
     ]
     secretSettings: []
